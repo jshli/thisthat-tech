@@ -7,7 +7,7 @@ const fetchCharacters = async (): Promise<
 > => {
   const timestamp = 1709816847812;
   //TODO: This is hardcoded
-  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=Sp&hash=df8fe48d53389795bb8f937e17994207&ts=1709816847812&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}`;
+  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=Sp&hash=df8fe48d53389795bb8f937e17994207&ts=${timestamp}&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}`;
   return fetch(url).then(async (response) => {
     if (!response.ok) {
       const error = await response.json();

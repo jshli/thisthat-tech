@@ -4,7 +4,7 @@
  */
 
 export interface paths {
-    "/v1/public/creators/{creatorId}/series": {
+    '/v1/public/creators/{creatorId}/series': {
         parameters: {
             query?: never;
             header?: never;
@@ -15,7 +15,7 @@ export interface paths {
          * Fetches lists of series filtered by a creator id.
          * @description Fetches lists of comic series in which a specific creator's work appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorSeriesCollection"];
+        get: operations['getCreatorSeriesCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -24,7 +24,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}/stories": {
+    '/v1/public/events/{eventId}/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -35,7 +35,7 @@ export interface paths {
          * Fetches lists of stories filtered by an event id.
          * @description Fetches lists of comic stories from a specific event, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEventStoryCollection"];
+        get: operations['getEventStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -44,7 +44,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/creators": {
+    '/v1/public/creators': {
         parameters: {
             query?: never;
             header?: never;
@@ -55,7 +55,7 @@ export interface paths {
          * Fetches lists of creators.
          * @description Fetches lists of comic creators with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollection"];
+        get: operations['getCreatorCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -64,7 +64,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/creators/{creatorId}/comics": {
+    '/v1/public/creators/{creatorId}/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -75,7 +75,7 @@ export interface paths {
          * Fetches lists of comics filtered by a creator id.
          * @description Fetches lists of comics in which the work of a specific creator appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicsCollection"];
+        get: operations['getComicsCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -84,7 +84,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}/characters": {
+    '/v1/public/stories/{storyId}/characters': {
         parameters: {
             query?: never;
             header?: never;
@@ -95,7 +95,7 @@ export interface paths {
          * Fetches lists of characters filtered by a story id.
          * @description Fetches lists of comic characters appearing in a single story, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollectionByStory"];
+        get: operations['getCreatorCollectionByStory'];
         put?: never;
         post?: never;
         delete?: never;
@@ -104,7 +104,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics/{comicId}/stories": {
+    '/v1/public/comics/{comicId}/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -115,7 +115,7 @@ export interface paths {
          * Fetches lists of stories filtered by a comic id.
          * @description Fetches lists of comic stories in a specific comic issue, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicStoryCollection"];
+        get: operations['getComicStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -124,7 +124,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}/comics": {
+    '/v1/public/events/{eventId}/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -135,7 +135,7 @@ export interface paths {
          * Fetches lists of comics filtered by an event id.
          * @description Fetches lists of comics which take place during a specific event, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicsCollectionByEvent"];
+        get: operations['getComicsCollectionByEvent'];
         put?: never;
         post?: never;
         delete?: never;
@@ -144,7 +144,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}": {
+    '/v1/public/series/{seriesId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -155,7 +155,7 @@ export interface paths {
          * Fetches a single comic series by id.
          * @description This method fetches a single comic series resource.  It is the canonical URI for any comic series resource provided by the API.
          */
-        get: operations["getSeriesIndividual"];
+        get: operations['getSeriesIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -164,7 +164,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters/{characterId}/series": {
+    '/v1/public/characters/{characterId}/series': {
         parameters: {
             query?: never;
             header?: never;
@@ -175,7 +175,7 @@ export interface paths {
          * Fetches lists of series filtered by a character id.
          * @description Fetches lists of comic series in which a specific character appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCharacterSeriesCollection"];
+        get: operations['getCharacterSeriesCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -184,7 +184,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}/series": {
+    '/v1/public/events/{eventId}/series': {
         parameters: {
             query?: never;
             header?: never;
@@ -195,7 +195,7 @@ export interface paths {
          * Fetches lists of series filtered by an event id.
          * @description Fetches lists of comic series in which a specific event takes place, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEventSeriesCollection"];
+        get: operations['getEventSeriesCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -204,7 +204,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}/comics": {
+    '/v1/public/series/{seriesId}/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -215,7 +215,7 @@ export interface paths {
          * Fetches lists of comics filtered by a series id.
          * @description Fetches lists of comics which are published as part of a specific series, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicsCollectionBySeries"];
+        get: operations['getComicsCollectionBySeries'];
         put?: never;
         post?: never;
         delete?: never;
@@ -224,7 +224,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters/{characterId}/comics": {
+    '/v1/public/characters/{characterId}/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -235,7 +235,7 @@ export interface paths {
          * Fetches lists of comics filtered by a character id.
          * @description Fetches lists of comics containing a specific character, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicsCharacterCollection"];
+        get: operations['getComicsCharacterCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -244,7 +244,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}/events": {
+    '/v1/public/stories/{storyId}/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -255,7 +255,7 @@ export interface paths {
          * Fetches lists of events filtered by a story id.
          * @description Fetches lists of events in which a specific story appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEventsCollection"];
+        get: operations['getEventsCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -264,7 +264,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics/{comicId}/characters": {
+    '/v1/public/comics/{comicId}/characters': {
         parameters: {
             query?: never;
             header?: never;
@@ -275,7 +275,7 @@ export interface paths {
          * Fetches lists of characters filtered by a comic id.
          * @description Fetches lists of characters which appear in a specific comic with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicCharacterCollection"];
+        get: operations['getComicCharacterCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -284,7 +284,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/creators/{creatorId}/stories": {
+    '/v1/public/creators/{creatorId}/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -295,7 +295,7 @@ export interface paths {
          * Fetches lists of stories filtered by a creator id.
          * @description Fetches lists of comic stories by a specific creator with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorStoryCollection"];
+        get: operations['getCreatorStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -304,7 +304,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics/{comicId}": {
+    '/v1/public/comics/{comicId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -315,7 +315,7 @@ export interface paths {
          * Fetches a single comic by id.
          * @description This method fetches a single comic resource.  It is the canonical URI for any comic resource provided by the API.
          */
-        get: operations["getComicIndividual"];
+        get: operations['getComicIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -324,7 +324,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}": {
+    '/v1/public/stories/{storyId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -335,7 +335,7 @@ export interface paths {
          * Fetches a single comic story by id.
          * @description This method fetches a single comic story resource.  It is the canonical URI for any comic story resource provided by the API.
          */
-        get: operations["getStoryIndividual"];
+        get: operations['getStoryIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -344,7 +344,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters/{characterId}/events": {
+    '/v1/public/characters/{characterId}/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -355,7 +355,7 @@ export interface paths {
          * Fetches lists of events filtered by a character id.
          * @description Fetches lists of events in which a specific character appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCharacterEventsCollection"];
+        get: operations['getCharacterEventsCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -364,7 +364,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/creators/{creatorId}/events": {
+    '/v1/public/creators/{creatorId}/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -375,7 +375,7 @@ export interface paths {
          * Fetches lists of events filtered by a creator id.
          * @description Fetches lists of events featuring the work of a specific creator with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorEventsCollection"];
+        get: operations['getCreatorEventsCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -384,7 +384,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}/creators": {
+    '/v1/public/series/{seriesId}/creators': {
         parameters: {
             query?: never;
             header?: never;
@@ -395,7 +395,7 @@ export interface paths {
          * Fetches lists of creators filtered by a series id.
          * @description Fetches lists of comic creators whose work appears in a specific series, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollectionBySeries"];
+        get: operations['getCreatorCollectionBySeries'];
         put?: never;
         post?: never;
         delete?: never;
@@ -404,7 +404,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics/{comicId}/creators": {
+    '/v1/public/comics/{comicId}/creators': {
         parameters: {
             query?: never;
             header?: never;
@@ -415,7 +415,7 @@ export interface paths {
          * Fetches lists of creators filtered by a comic id.
          * @description Fetches lists of comic creators whose work appears in a specific comic, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollectionByComic"];
+        get: operations['getCreatorCollectionByComic'];
         put?: never;
         post?: never;
         delete?: never;
@@ -424,7 +424,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters/{characterId}": {
+    '/v1/public/characters/{characterId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -435,7 +435,7 @@ export interface paths {
          * Fetches a single character by id.
          * @description This method fetches a single character resource.  It is the canonical URI for any character resource provided by the API.
          */
-        get: operations["getCharacterIndividual"];
+        get: operations['getCharacterIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -444,7 +444,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics": {
+    '/v1/public/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -455,7 +455,7 @@ export interface paths {
          * Fetches lists of comics.
          * @description Fetches lists of comics with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComics"];
+        get: operations['getComics'];
         put?: never;
         post?: never;
         delete?: never;
@@ -464,7 +464,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series": {
+    '/v1/public/series': {
         parameters: {
             query?: never;
             header?: never;
@@ -475,7 +475,7 @@ export interface paths {
          * Fetches lists of series.
          * @description Fetches lists of comic series with optional filters. See notes on individual parameters below.
          */
-        get: operations["getSeriesCollection"];
+        get: operations['getSeriesCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -484,7 +484,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}/stories": {
+    '/v1/public/series/{seriesId}/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -495,7 +495,7 @@ export interface paths {
          * Fetches lists of stories filtered by a series id.
          * @description Fetches lists of comic stories from a specific series with optional filters. See notes on individual parameters below.
          */
-        get: operations["getSeriesStoryCollection"];
+        get: operations['getSeriesStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -504,7 +504,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}/characters": {
+    '/v1/public/events/{eventId}/characters': {
         parameters: {
             query?: never;
             header?: never;
@@ -515,7 +515,7 @@ export interface paths {
          * Fetches lists of characters filtered by an event id.
          * @description Fetches lists of characters which appear in a specific event, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEventCharacterCollection"];
+        get: operations['getEventCharacterCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -524,7 +524,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters": {
+    '/v1/public/characters': {
         parameters: {
             query?: never;
             header?: never;
@@ -535,7 +535,7 @@ export interface paths {
          * Fetches lists of characters.
          * @description Fetches lists of comic characters with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCharacters"];
+        get: operations['getCharacters'];
         put?: never;
         post?: never;
         delete?: never;
@@ -544,7 +544,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/creators/{creatorId}": {
+    '/v1/public/creators/{creatorId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -555,7 +555,7 @@ export interface paths {
          * Fetches a single creator by id.
          * @description This method fetches a single creator resource.  It is the canonical URI for any creator resource provided by the API.
          */
-        get: operations["getCreatorIndividual"];
+        get: operations['getCreatorIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -564,7 +564,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}": {
+    '/v1/public/events/{eventId}': {
         parameters: {
             query?: never;
             header?: never;
@@ -575,7 +575,7 @@ export interface paths {
          * Fetches a single event by id.
          * @description This method fetches a single event resource.  It is the canonical URI for any event resource provided by the API.
          */
-        get: operations["getEventIndividual"];
+        get: operations['getEventIndividual'];
         put?: never;
         post?: never;
         delete?: never;
@@ -584,7 +584,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}/creators": {
+    '/v1/public/stories/{storyId}/creators': {
         parameters: {
             query?: never;
             header?: never;
@@ -595,7 +595,7 @@ export interface paths {
          * Fetches lists of creators filtered by a story id.
          * @description Fetches lists of comic creators whose work appears in a specific story, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollectionByStoryId"];
+        get: operations['getCreatorCollectionByStoryId'];
         put?: never;
         post?: never;
         delete?: never;
@@ -604,7 +604,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/characters/{characterId}/stories": {
+    '/v1/public/characters/{characterId}/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -615,7 +615,7 @@ export interface paths {
          * Fetches lists of stories filtered by a character id.
          * @description Fetches lists of comic stories  featuring a specific character with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCharacterStoryCollection"];
+        get: operations['getCharacterStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -624,7 +624,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}/comics": {
+    '/v1/public/stories/{storyId}/comics': {
         parameters: {
             query?: never;
             header?: never;
@@ -635,7 +635,7 @@ export interface paths {
          * Fetches lists of comics filtered by a story id.
          * @description Fetches lists of comics in which a specific story appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getComicsCollectionByStoryId"];
+        get: operations['getComicsCollectionByStoryId'];
         put?: never;
         post?: never;
         delete?: never;
@@ -644,7 +644,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories/{storyId}/series": {
+    '/v1/public/stories/{storyId}/series': {
         parameters: {
             query?: never;
             header?: never;
@@ -655,7 +655,7 @@ export interface paths {
          * Fetches lists of series filtered by a story id.
          * @description Fetches lists of comic series in which the specified story takes place. See notes on individual parameters below.
          */
-        get: operations["getStorySeriesCollection"];
+        get: operations['getStorySeriesCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -664,7 +664,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}/events": {
+    '/v1/public/series/{seriesId}/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -675,7 +675,7 @@ export interface paths {
          * Fetches lists of events filtered by a series id.
          * @description Fetches lists of events which occur in a specific series, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEventsCollectionBySeriesId"];
+        get: operations['getEventsCollectionBySeriesId'];
         put?: never;
         post?: never;
         delete?: never;
@@ -684,7 +684,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/comics/{comicId}/events": {
+    '/v1/public/comics/{comicId}/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -695,7 +695,7 @@ export interface paths {
          * Fetches lists of events filtered by a comic id.
          * @description Fetches lists of events in which a specific comic appears, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getIssueEventsCollection"];
+        get: operations['getIssueEventsCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -704,7 +704,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events": {
+    '/v1/public/events': {
         parameters: {
             query?: never;
             header?: never;
@@ -715,7 +715,7 @@ export interface paths {
          * Fetches lists of events.
          * @description Fetches lists of events with optional filters. See notes on individual parameters below.
          */
-        get: operations["getEvents"];
+        get: operations['getEvents'];
         put?: never;
         post?: never;
         delete?: never;
@@ -724,7 +724,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/series/{seriesId}/characters": {
+    '/v1/public/series/{seriesId}/characters': {
         parameters: {
             query?: never;
             header?: never;
@@ -735,7 +735,7 @@ export interface paths {
          * Fetches lists of characters filtered by a series id.
          * @description Fetches lists of characters which appear in specific series, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getSeriesCharacterWrapper"];
+        get: operations['getSeriesCharacterWrapper'];
         put?: never;
         post?: never;
         delete?: never;
@@ -744,7 +744,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/events/{eventId}/creators": {
+    '/v1/public/events/{eventId}/creators': {
         parameters: {
             query?: never;
             header?: never;
@@ -755,7 +755,7 @@ export interface paths {
          * Fetches lists of creators filtered by an event id.
          * @description Fetches lists of comic creators whose work appears in a specific event, with optional filters. See notes on individual parameters below.
          */
-        get: operations["getCreatorCollectionByEventId"];
+        get: operations['getCreatorCollectionByEventId'];
         put?: never;
         post?: never;
         delete?: never;
@@ -764,7 +764,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/v1/public/stories": {
+    '/v1/public/stories': {
         parameters: {
             query?: never;
             header?: never;
@@ -775,7 +775,7 @@ export interface paths {
          * Fetches lists of stories.
          * @description Fetches lists of comic stories with optional filters. See notes on individual parameters below.
          */
-        get: operations["getStoryCollection"];
+        get: operations['getStoryCollection'];
         put?: never;
         post?: never;
         delete?: never;
@@ -795,7 +795,7 @@ export interface components {
             returned?: number;
             /** @description The path to the full list of series in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["SeriesList"];
+            items?: components['schemas']['SeriesList'];
         };
         int: number;
         CreatorList: {
@@ -803,14 +803,14 @@ export interface components {
             returned?: number;
             /** @description The path to the full list of creators in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["CreatorList"];
+            items?: components['schemas']['CreatorList'];
         };
         ComicDataContainer: {
             offset?: number;
             limit?: number;
             total?: number;
             count?: number;
-            results?: components["schemas"]["ComicDataContainer"];
+            results?: components['schemas']['ComicDataContainer'];
         };
         Creator: {
             id?: number;
@@ -827,12 +827,12 @@ export interface components {
             modified?: string;
             /** @description The canonical URL identifier for this resource. */
             resourceURI?: string;
-            urls?: components["schemas"]["Url"][];
-            thumbnail?: components["schemas"]["Image"];
-            series?: components["schemas"]["SeriesList"];
-            stories?: components["schemas"]["StoryList"];
-            comics?: components["schemas"]["ComicList"];
-            events?: components["schemas"]["EventList"];
+            urls?: components['schemas']['Url'][];
+            thumbnail?: components['schemas']['Image'];
+            series?: components['schemas']['SeriesList'];
+            stories?: components['schemas']['StoryList'];
+            comics?: components['schemas']['ComicList'];
+            events?: components['schemas']['EventList'];
         };
         Image: {
             /** @description The directory path of to the image. */
@@ -851,10 +851,10 @@ export interface components {
             limit?: number;
             total?: number;
             count?: number;
-            results?: components["schemas"]["CharacterDataContainer"];
+            results?: components['schemas']['CharacterDataContainer'];
         };
         EventDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -863,25 +863,25 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["EventDataContainer"];
+            data?: components['schemas']['EventDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
         ComicDate: {
             /** @description A description of the date (e.g. onsale date, FOC date). */
             type?: string;
-            date?: components["schemas"]["Date"];
+            date?: components['schemas']['Date'];
         };
         Date: string;
         SeriesDataContainer: {
-            offset?: components["schemas"]["int"];
-            limit?: components["schemas"]["int"];
-            total?: components["schemas"]["int"];
-            count?: components["schemas"]["int"];
-            results?: components["schemas"]["Array"];
+            offset?: components['schemas']['int'];
+            limit?: components['schemas']['int'];
+            total?: components['schemas']['int'];
+            count?: components['schemas']['int'];
+            results?: components['schemas']['Array'];
         };
         Story: {
-            id?: components["schemas"]["int"];
+            id?: components['schemas']['int'];
             /** @description The story title. */
             title?: string;
             /** @description A short description of the story. */
@@ -890,17 +890,17 @@ export interface components {
             resourceURI?: string;
             /** @description The story type e.g. interior story, cover, text story. */
             type?: string;
-            modified?: components["schemas"]["Date"];
-            thumbnail?: components["schemas"]["Image"];
-            comics?: components["schemas"]["ComicList"];
-            series?: components["schemas"]["SeriesList"];
-            events?: components["schemas"]["EventList"];
-            characters?: components["schemas"]["CharacterList"];
-            creators?: components["schemas"]["CreatorList"];
-            originalissue?: components["schemas"]["ComicSummary"];
+            modified?: components['schemas']['Date'];
+            thumbnail?: components['schemas']['Image'];
+            comics?: components['schemas']['ComicList'];
+            series?: components['schemas']['SeriesList'];
+            events?: components['schemas']['EventList'];
+            characters?: components['schemas']['CharacterList'];
+            creators?: components['schemas']['CreatorList'];
+            originalissue?: components['schemas']['ComicSummary'];
         };
         StoryDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -909,21 +909,21 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["StoryDataContainer"];
+            data?: components['schemas']['StoryDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
         Comic: {
-            id?: components["schemas"]["int"];
-            digitalId?: components["schemas"]["int"];
+            id?: components['schemas']['int'];
+            digitalId?: components['schemas']['int'];
             /** @description The canonical title of the comic. */
             title?: string;
-            issueNumber?: components["schemas"]["double"];
+            issueNumber?: components['schemas']['double'];
             /** @description If the issue is a variant (e.g. an alternate cover, second printing, or director’s cut), a text description of the variant. */
             variantDescription?: string;
             /** @description The preferred description of the comic. */
             description?: string;
-            modified?: components["schemas"]["Date"];
+            modified?: components['schemas']['Date'];
             /** @description The ISBN for the comic (generally only populated for collection formats). */
             isbn?: string;
             /** @description The UPC barcode number for the comic (generally only populated for periodical formats). */
@@ -936,30 +936,30 @@ export interface components {
             issn?: string;
             /** @description The publication format of the comic e.g. comic, hardcover, trade paperback. */
             format?: string;
-            pageCount?: components["schemas"]["int"];
-            textObjects?: components["schemas"]["Array"];
+            pageCount?: components['schemas']['int'];
+            textObjects?: components['schemas']['Array'];
             /** @description The canonical URL identifier for this resource. */
             resourceURI?: string;
-            urls?: components["schemas"]["Url"];
-            series?: components["schemas"]["SeriesSummary"];
-            variants?: components["schemas"]["Array"];
-            collections?: components["schemas"]["Array"];
-            collectedIssues?: components["schemas"]["Array"];
-            dates?: components["schemas"]["Array"];
+            urls?: components['schemas']['Url'];
+            series?: components['schemas']['SeriesSummary'];
+            variants?: components['schemas']['Array'];
+            collections?: components['schemas']['Array'];
+            collectedIssues?: components['schemas']['Array'];
+            dates?: components['schemas']['Array'];
             prices?: number;
-            thumbnail?: components["schemas"]["Image"];
-            images?: components["schemas"]["Image"][];
-            creators?: components["schemas"]["CreatorList"];
-            characters?: components["schemas"]["CharacterList"];
-            stories?: components["schemas"]["StoryList"];
-            events?: components["schemas"]["EventList"];
+            thumbnail?: components['schemas']['Image'];
+            images?: components['schemas']['Image'][];
+            creators?: components['schemas']['CreatorList'];
+            characters?: components['schemas']['CharacterList'];
+            stories?: components['schemas']['StoryList'];
+            events?: components['schemas']['EventList'];
         };
         CreatorDataContainer: {
-            offset?: components["schemas"]["int"];
-            limit?: components["schemas"]["int"];
-            total?: components["schemas"]["int"];
-            count?: components["schemas"]["int"];
-            results?: components["schemas"]["Array"];
+            offset?: components['schemas']['int'];
+            limit?: components['schemas']['int'];
+            total?: components['schemas']['int'];
+            count?: components['schemas']['int'];
+            results?: components['schemas']['Array'];
         };
         SeriesSummary: {
             /** @description The path to the individual series resource. */
@@ -984,7 +984,7 @@ export interface components {
             role?: string;
         };
         CharacterDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -993,28 +993,28 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["CharacterDataContainer"];
+            data?: components['schemas']['CharacterDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
         Character: {
-            id?: components["schemas"]["int"];
+            id?: components['schemas']['int'];
             /** @description The name of the character. */
             name?: string;
             /** @description A short bio or description of the character. */
             description?: string;
-            modified?: components["schemas"]["Date"];
+            modified?: components['schemas']['Date'];
             /** @description The canonical URL identifier for this resource. */
             resourceURI?: string;
-            urls?: components["schemas"]["Array"];
-            thumbnail?: components["schemas"]["Image"];
-            comics?: components["schemas"]["ComicList"];
-            stories?: components["schemas"]["StoryList"];
-            events?: components["schemas"]["EventList"];
-            series?: components["schemas"]["SeriesList"];
+            urls?: components['schemas']['Array'];
+            thumbnail?: components['schemas']['Image'];
+            comics?: components['schemas']['ComicList'];
+            stories?: components['schemas']['StoryList'];
+            events?: components['schemas']['EventList'];
+            series?: components['schemas']['SeriesList'];
         };
         ComicDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -1023,7 +1023,7 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["ComicDataContainer"];
+            data?: components['schemas']['ComicDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
@@ -1036,25 +1036,25 @@ export interface components {
             type?: string;
         };
         EventDataContainer: {
-            offset?: components["schemas"]["int"];
-            limit?: components["schemas"]["int"];
-            total?: components["schemas"]["int"];
-            count?: components["schemas"]["int"];
-            results?: components["schemas"]["Array"];
+            offset?: components['schemas']['int'];
+            limit?: components['schemas']['int'];
+            total?: components['schemas']['int'];
+            count?: components['schemas']['int'];
+            results?: components['schemas']['Array'];
         };
         CharacterList: {
-            available?: components["schemas"]["int"];
-            returned?: components["schemas"]["int"];
+            available?: components['schemas']['int'];
+            returned?: components['schemas']['int'];
             /** @description The path to the full list of characters in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["Array"];
+            items?: components['schemas']['Array'];
         };
         ComicList: {
-            available?: components["schemas"]["int"];
-            returned?: components["schemas"]["int"];
+            available?: components['schemas']['int'];
+            returned?: components['schemas']['int'];
             /** @description The path to the full list of issues in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["Array"];
+            items?: components['schemas']['Array'];
         };
         ComicPrice: {
             /** @description A description of the price (e.g. print price, digital price). */
@@ -1062,41 +1062,41 @@ export interface components {
             price?: number;
         };
         Series: {
-            id?: components["schemas"]["int"];
+            id?: components['schemas']['int'];
             /** @description The canonical title of the series. */
             title?: string;
             /** @description A description of the series. */
             description?: string;
             /** @description The canonical URL identifier for this resource. */
             resourceURI?: string;
-            urls?: components["schemas"]["Array"];
-            startYear?: components["schemas"]["int"];
-            endYear?: components["schemas"]["int"];
+            urls?: components['schemas']['Array'];
+            startYear?: components['schemas']['int'];
+            endYear?: components['schemas']['int'];
             /** @description The age-appropriateness rating for the series. */
             rating?: string;
-            modified?: components["schemas"]["Date"];
-            thumbnail?: components["schemas"]["Image"];
-            comics?: components["schemas"]["ComicList"];
-            stories?: components["schemas"]["StoryList"];
-            events?: components["schemas"]["EventList"];
-            characters?: components["schemas"]["CharacterList"];
-            creators?: components["schemas"]["CreatorList"];
-            next?: components["schemas"]["SeriesSummary"];
-            previous?: components["schemas"]["SeriesSummary"];
+            modified?: components['schemas']['Date'];
+            thumbnail?: components['schemas']['Image'];
+            comics?: components['schemas']['ComicList'];
+            stories?: components['schemas']['StoryList'];
+            events?: components['schemas']['EventList'];
+            characters?: components['schemas']['CharacterList'];
+            creators?: components['schemas']['CreatorList'];
+            next?: components['schemas']['SeriesSummary'];
+            previous?: components['schemas']['SeriesSummary'];
         };
         StoryDataContainer: {
-            offset?: components["schemas"]["int"];
-            limit?: components["schemas"]["int"];
-            total?: components["schemas"]["int"];
-            count?: components["schemas"]["int"];
-            results?: components["schemas"]["Array"];
+            offset?: components['schemas']['int'];
+            limit?: components['schemas']['int'];
+            total?: components['schemas']['int'];
+            count?: components['schemas']['int'];
+            results?: components['schemas']['Array'];
         };
         StoryList: {
-            available?: components["schemas"]["int"];
-            returned?: components["schemas"]["int"];
+            available?: components['schemas']['int'];
+            returned?: components['schemas']['int'];
             /** @description The path to the full list of stories in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["Array"];
+            items?: components['schemas']['Array'];
         };
         TextObject: {
             /** @description The canonical type of the text object (e.g. solicit text, preview text, etc.). */
@@ -1107,14 +1107,14 @@ export interface components {
             text?: string;
         };
         EventList: {
-            available?: components["schemas"]["int"];
-            returned?: components["schemas"]["int"];
+            available?: components['schemas']['int'];
+            returned?: components['schemas']['int'];
             /** @description The path to the full list of events in this collection. */
             collectionURI?: string;
-            items?: components["schemas"]["Array"];
+            items?: components['schemas']['Array'];
         };
         SeriesDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -1123,7 +1123,7 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["SeriesDataContainer"];
+            data?: components['schemas']['SeriesDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
@@ -1140,28 +1140,28 @@ export interface components {
             name?: string;
         };
         Event: {
-            id?: components["schemas"]["int"];
+            id?: components['schemas']['int'];
             /** @description The title of the event. */
             title?: string;
             /** @description A description of the event. */
             description?: string;
             /** @description The canonical URL identifier for this resource. */
             resourceURI?: string;
-            urls?: components["schemas"]["Array"];
-            modified?: components["schemas"]["Date"];
-            start?: components["schemas"]["Date"];
-            end?: components["schemas"]["Date"];
-            thumbnail?: components["schemas"]["Image"];
-            comics?: components["schemas"]["ComicList"];
-            stories?: components["schemas"]["StoryList"];
-            series?: components["schemas"]["SeriesList"];
-            characters?: components["schemas"]["CharacterList"];
-            creators?: components["schemas"]["CreatorList"];
-            next?: components["schemas"]["EventSummary"];
-            previous?: components["schemas"]["EventSummary"];
+            urls?: components['schemas']['Array'];
+            modified?: components['schemas']['Date'];
+            start?: components['schemas']['Date'];
+            end?: components['schemas']['Date'];
+            thumbnail?: components['schemas']['Image'];
+            comics?: components['schemas']['ComicList'];
+            stories?: components['schemas']['StoryList'];
+            series?: components['schemas']['SeriesList'];
+            characters?: components['schemas']['CharacterList'];
+            creators?: components['schemas']['CreatorList'];
+            next?: components['schemas']['EventSummary'];
+            previous?: components['schemas']['EventSummary'];
         };
         CreatorDataWrapper: {
-            code?: components["schemas"]["int"];
+            code?: components['schemas']['int'];
             /** @description A string description of the call status. */
             status?: string;
             /** @description The copyright notice for the returned result. */
@@ -1170,7 +1170,7 @@ export interface components {
             attributionText?: string;
             /** @description An HTML representation of the attribution notice for this result.  Please display either this notice or the contents of the attributionText field on all screens which contain data from the Marvel Comics API. */
             attributionHTML?: string;
-            data?: components["schemas"]["CreatorDataContainer"];
+            data?: components['schemas']['CreatorDataContainer'];
             /** @description A digest value of the content returned by the call. */
             etag?: string;
         };
@@ -1203,11 +1203,25 @@ export interface operations {
                 /** @description Return only series which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Filter the series by publication frequency type. */
-                seriesType?: "collection" | "one shot" | "limited" | "ongoing";
+                seriesType?: 'collection' | 'one shot' | 'limited' | 'ongoing';
                 /** @description Return only series containing one or more comics with the specified format. */
-                contains?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                contains?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "title" | "modified" | "startYear" | "-title" | "-modified" | "-startYear";
+                orderBy?:
+                | 'title'
+                | 'modified'
+                | 'startYear'
+                | '-title'
+                | '-modified'
+                | '-startYear';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1245,7 +1259,7 @@ export interface operations {
                 /** @description Return only stories which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1299,7 +1313,17 @@ export interface operations {
                 /** @description Return only creators who worked on the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "lastName" | "firstName" | "middleName" | "suffix" | "modified" | "-lastName" | "-firstName" | "-middleName" | "-suffix" | "-modified";
+                orderBy?:
+                | 'lastName'
+                | 'firstName'
+                | 'middleName'
+                | 'suffix'
+                | 'modified'
+                | '-lastName'
+                | '-firstName'
+                | '-middleName'
+                | '-suffix'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1324,13 +1348,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variant comics from the result set. */
                 noVariants?: true;
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -1354,7 +1386,7 @@ export interface operations {
                 /** @description Filter by ISSN. */
                 issn?: string;
                 /** @description Include only results which are available digitally. */
-                hasDigitalIssue?: "true";
+                hasDigitalIssue?: 'true';
                 /** @description Return only comics which have been modified since the specified date. */
                 modifiedSince?: string;
                 /** @description Return only comics which feature the specified characters (accepts a comma-separated list of ids). */
@@ -1370,7 +1402,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1410,7 +1452,7 @@ export interface operations {
                 /** @description Return only characters which appear comics that took place in the specified events (accepts a comma-separated list of ids). */
                 events?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "modified" | "-name" | "-modified";
+                orderBy?: 'name' | 'modified' | '-name' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1432,6 +1474,7 @@ export interface operations {
                 };
                 content?: never;
             };
+            200: components['schemas']['CharacterDataWrapper'];
         };
     };
     getComicStoryCollection: {
@@ -1448,7 +1491,7 @@ export interface operations {
                 /** @description Return only stories which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources. */
@@ -1476,13 +1519,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variant comics from the result set. */
-                noVariants?: "true";
+                noVariants?: 'true';
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -1506,7 +1557,7 @@ export interface operations {
                 /** @description Filter by ISSN. */
                 issn?: string;
                 /** @description Include only results which are available digitally. */
-                hasDigitalIssue?: "true";
+                hasDigitalIssue?: 'true';
                 /** @description Return only comics which have been modified since the specified date. */
                 modifiedSince?: string;
                 /** @description Return only comics which feature work by the specified creators (accepts a comma-separated list of ids). */
@@ -1524,7 +1575,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1589,11 +1650,25 @@ export interface operations {
                 /** @description Return only series which feature work by the specified creators (accepts a comma-separated list of ids). */
                 creators?: number[];
                 /** @description Filter the series by publication frequency type. */
-                seriesType?: "collection" | "one shot" | "limited" | "ongoing";
+                seriesType?: 'collection' | 'one shot' | 'limited' | 'ongoing';
                 /** @description Return only series containing one or more comics with the specified format. */
-                contains?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                contains?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "title" | "modified" | "startYear" | "-title" | "-modified" | "-startYear";
+                orderBy?:
+                | 'title'
+                | 'modified'
+                | 'startYear'
+                | '-title'
+                | '-modified'
+                | '-startYear';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1637,11 +1712,25 @@ export interface operations {
                 /** @description Return only series which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Filter the series by publication frequency type. */
-                seriesType?: "collection" | "one shot" | "limited" | "ongoing";
+                seriesType?: 'collection' | 'one shot' | 'limited' | 'ongoing';
                 /** @description Return only series containing one or more comics with the specified format. */
-                contains?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                contains?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "title" | "modified" | "startYear" | "-title" | "-modified" | "-startYear";
+                orderBy?:
+                | 'title'
+                | 'modified'
+                | 'startYear'
+                | '-title'
+                | '-modified'
+                | '-startYear';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1669,13 +1758,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variant comics from the result set. */
-                noVariants?: "true";
+                noVariants?: 'true';
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -1699,7 +1796,7 @@ export interface operations {
                 /** @description Filter by ISSN. */
                 issn?: string;
                 /** @description Include only results which are available digitally. */
-                hasDigitalIssue?: "true";
+                hasDigitalIssue?: 'true';
                 /** @description Return only comics which have been modified since the specified date. */
                 modifiedSince?: string;
                 /** @description Return only comics which feature work by the specified creators (accepts a comma-separated list of ids). */
@@ -1715,7 +1812,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1743,13 +1850,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variant comics from the result set. */
                 noVariants?: true;
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -1789,7 +1904,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1831,7 +1956,13 @@ export interface operations {
                 /** @description Return only events which take place in the specified comics (accepts a comma-separated list of ids). */
                 comics?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1871,7 +2002,7 @@ export interface operations {
                 /** @description Return only characters which appear the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "modified" | "-name" | "-modified";
+                orderBy?: 'name' | 'modified' | '-name' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1909,7 +2040,7 @@ export interface operations {
                 /** @description Return only stories which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -1993,7 +2124,13 @@ export interface operations {
                 /** @description Return only events which contain the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2035,7 +2172,13 @@ export interface operations {
                 /** @description Return only events which contain the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2087,7 +2230,17 @@ export interface operations {
                 /** @description Return only creators who worked on the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "lastName" | "firstName" | "middleName" | "suffix" | "modified" | "-lastName" | "-firstName" | "-middleName" | "-suffix" | "-modified";
+                orderBy?:
+                | 'lastName'
+                | 'firstName'
+                | 'middleName'
+                | 'suffix'
+                | 'modified'
+                | '-lastName'
+                | '-firstName'
+                | '-middleName'
+                | '-suffix'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2139,7 +2292,17 @@ export interface operations {
                 /** @description Return only creators who worked on the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "lastName" | "firstName" | "middleName" | "suffix" | "modified" | "-lastName" | "-firstName" | "-middleName" | "-suffix" | "-modified";
+                orderBy?:
+                | 'lastName'
+                | 'firstName'
+                | 'middleName'
+                | 'suffix'
+                | 'modified'
+                | '-lastName'
+                | '-firstName'
+                | '-middleName'
+                | '-suffix'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2188,13 +2351,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variants (alternate covers, secondary printings, director's cuts, etc.) from the result set. */
                 noVariants?: true;
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -2236,7 +2407,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). Accepts a comma-separated list of ids. */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2279,11 +2460,25 @@ export interface operations {
                 /** @description Return only series which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Filter the series by publication frequency type. */
-                seriesType?: "collection" | "one shot" | "limited" | "ongoing";
+                seriesType?: 'collection' | 'one shot' | 'limited' | 'ongoing';
                 /** @description Return only series containing one or more comics with the specified format. */
-                contains?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                contains?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "title" | "modified" | "startYear" | "-title" | "-modified" | "-startYear";
+                orderBy?:
+                | 'title'
+                | 'modified'
+                | 'startYear'
+                | '-title'
+                | '-modified'
+                | '-startYear';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2318,7 +2513,7 @@ export interface operations {
                 /** @description Return only stories which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2358,7 +2553,7 @@ export interface operations {
                 /** @description Return only characters which appear the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "modified" | "-name" | "-modified";
+                orderBy?: 'name' | 'modified' | '-name' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2400,7 +2595,7 @@ export interface operations {
                 /** @description Return only characters which appear the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "modified" | "-name" | "-modified";
+                orderBy?: 'name' | 'modified' | '-name' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2419,6 +2614,7 @@ export interface operations {
                 };
                 content?: never;
             };
+            200: components['schemas']['CharacterDataWrapper'];
         };
     };
     getCreatorIndividual: {
@@ -2491,7 +2687,17 @@ export interface operations {
                 /** @description Return only creators who worked on comics that took place in the specified events (accepts a comma-separated list of ids). */
                 events?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "lastName" | "firstName" | "middleName" | "suffix" | "modified" | "-lastName" | "-firstName" | "-middleName" | "-suffix" | "-modified";
+                orderBy?:
+                | 'lastName'
+                | 'firstName'
+                | 'middleName'
+                | 'suffix'
+                | 'modified'
+                | '-lastName'
+                | '-firstName'
+                | '-middleName'
+                | '-suffix'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2529,7 +2735,7 @@ export interface operations {
                 /** @description Return only stories which feature work by the specified creators (accepts a comma-separated list of ids). */
                 creators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2557,13 +2763,21 @@ export interface operations {
         parameters: {
             query?: {
                 /** @description Filter by the issue format (e.g. comic, digital comic, hardcover). */
-                format?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                format?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Filter by the issue format type (comic or collection). */
-                formatType?: "comic" | "collection";
+                formatType?: 'comic' | 'collection';
                 /** @description Exclude variant comics from the result set. */
-                noVariants?: "true";
+                noVariants?: 'true';
                 /** @description Return comics within a predefined date range. */
-                dateDescriptor?: "lastWeek" | "thisWeek" | "nextWeek" | "thisMonth";
+                dateDescriptor?: 'lastWeek' | 'thisWeek' | 'nextWeek' | 'thisMonth';
                 /** @description Return comics within a predefined date range.  Dates must be specified as date1,date2 (e.g. 2013-01-01,2013-01-02).  Dates are preferably formatted as YYYY-MM-DD but may be sent as any common date format. */
                 dateRange?: number[];
                 /** @description Return only issues in series whose title matches the input. */
@@ -2587,7 +2801,7 @@ export interface operations {
                 /** @description Filter by ISSN. */
                 issn?: string;
                 /** @description Include only results which are available digitally. */
-                hasDigitalIssue?: "true";
+                hasDigitalIssue?: 'true';
                 /** @description Return only comics which have been modified since the specified date. */
                 modifiedSince?: string;
                 /** @description Return only comics which feature work by the specified creators (accepts a comma-separated list of ids). */
@@ -2603,7 +2817,17 @@ export interface operations {
                 /** @description Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). */
                 collaborators?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "focDate" | "onsaleDate" | "title" | "issueNumber" | "modified" | "-focDate" | "-onsaleDate" | "-title" | "-issueNumber" | "-modified";
+                orderBy?:
+                | 'focDate'
+                | 'onsaleDate'
+                | 'title'
+                | 'issueNumber'
+                | 'modified'
+                | '-focDate'
+                | '-onsaleDate'
+                | '-title'
+                | '-issueNumber'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2647,11 +2871,25 @@ export interface operations {
                 /** @description Return only series which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Filter the series by publication frequency type. */
-                seriesType?: "collection" | "one shot" | "limited" | "ongoing";
+                seriesType?: 'collection' | 'one shot' | 'limited' | 'ongoing';
                 /** @description Return only series containing one or more comics with the specified format. */
-                contains?: "comic" | "magazine" | "trade paperback" | "hardcover" | "digest" | "graphic novel" | "digital comic" | "infinite comic";
+                contains?:
+                | 'comic'
+                | 'magazine'
+                | 'trade paperback'
+                | 'hardcover'
+                | 'digest'
+                | 'graphic novel'
+                | 'digital comic'
+                | 'infinite comic';
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "title" | "modified" | "startYear" | "-title" | "-modified" | "-startYear";
+                orderBy?:
+                | 'title'
+                | 'modified'
+                | 'startYear'
+                | '-title'
+                | '-modified'
+                | '-startYear';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2693,7 +2931,13 @@ export interface operations {
                 /** @description Return only events which contain the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2735,7 +2979,13 @@ export interface operations {
                 /** @description Return only events which contain the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2779,7 +3029,13 @@ export interface operations {
                 /** @description Return only events which take place in the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "startDate" | "modified" | "-name" | "-startDate" | "-modified";
+                orderBy?:
+                | 'name'
+                | 'startDate'
+                | 'modified'
+                | '-name'
+                | '-startDate'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2816,7 +3072,7 @@ export interface operations {
                 /** @description Return only characters which appear the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "name" | "modified" | "-name" | "-modified";
+                orderBy?: 'name' | 'modified' | '-name' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2868,7 +3124,17 @@ export interface operations {
                 /** @description Return only creators who worked on the specified stories (accepts a comma-separated list of ids). */
                 stories?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "lastName" | "firstName" | "middleName" | "suffix" | "modified" | "-lastName" | "-firstName" | "-middleName" | "-suffix" | "-modified";
+                orderBy?:
+                | 'lastName'
+                | 'firstName'
+                | 'middleName'
+                | 'suffix'
+                | 'modified'
+                | '-lastName'
+                | '-firstName'
+                | '-middleName'
+                | '-suffix'
+                | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */
@@ -2908,7 +3174,7 @@ export interface operations {
                 /** @description Return only stories which feature the specified characters (accepts a comma-separated list of ids). */
                 characters?: number[];
                 /** @description Order the result set by a field or fields. Add a "-" to the value sort in descending order. Multiple values are given priority in the order in which they are passed. */
-                orderBy?: "id" | "modified" | "-id" | "-modified";
+                orderBy?: 'id' | 'modified' | '-id' | '-modified';
                 /** @description Limit the result set to the specified number of resources. */
                 limit?: number;
                 /** @description Skip the specified number of resources in the result set. */

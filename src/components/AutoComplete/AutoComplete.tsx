@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from 'react';
-import { useGetCharacters } from '../../hooks/useGetCharacters';
 
 export const AutoComplete = () => {
   const [inputValue, setInputValue] = useState<string>('');

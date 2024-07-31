@@ -2,11 +2,15 @@ import { ChangeEvent, useMemo, useState } from 'react';
 import { Dropdown } from './Dropdown/Dropdown';
 import { debounce } from '../../utilities/debounce';
 import { useSearchMovies } from '../../hooks/useSearchMovies';
+import { Movie } from '../../types';
 
-export const AutoComplete = () => {
+type Props = {
+  onSelect: (value: Movie) => void;
+};
+
+export const AutoComplete = ({ onSelect }: Props) => {
   const [inputValue, setInputValue] = useState<string>('');
   const [searchStr, setSearchStr] = useState<string>('');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { isPending, isError, data } = useSearchMovies(searchStr);
 
   const debouncedSetSearchStr = useMemo(
@@ -34,7 +38,11 @@ export const AutoComplete = () => {
           list="autocomplete-options"
         />
         {inputValue.length > 1 && (
-          <Dropdown isPending={isPending} results={data?.results} />
+          <Dropdown
+            isPending={isPending}
+            results={data?.results}
+            onSelect={onSelect}
+          />
         )}
       </div>
     </div>

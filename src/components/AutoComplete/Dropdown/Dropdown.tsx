@@ -1,12 +1,14 @@
 import { paths } from '../../../../schema';
 import { useSearchMovies } from '../../../hooks/useSearchMovies';
+import { Movie } from '../../../types';
 
 type Props = {
   isPending: boolean;
+  onSelect: (value: Movie) => void;
   results: paths['/3/search/movie']['get']['responses']['200']['content']['application/json']['results'];
 };
 
-export const Dropdown = ({ isPending, results }: Props) => {
+export const Dropdown = ({ isPending, results, onSelect }: Props) => {
   if (isPending) {
     return (
       <div role="listbox" className={'dropdown dropdown--empty'}>
@@ -27,7 +29,11 @@ export const Dropdown = ({ isPending, results }: Props) => {
     return (
       <ul role="listbox" className={'dropdown'} tabIndex={-1}>
         {results.map((movie) => (
-          <li className="list-none" key={movie.id}>
+          <li
+            className="list-none"
+            key={movie.id}
+            onClick={() => onSelect(movie)}
+          >
             {movie.title}
           </li>
         ))}

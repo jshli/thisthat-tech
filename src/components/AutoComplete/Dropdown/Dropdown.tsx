@@ -1,12 +1,12 @@
-import { useSearchMovies } from '../../../hooks/useGetCharacters';
+import { paths } from '../../../../schema';
+import { useSearchMovies } from '../../../hooks/useSearchMovies';
 
 type Props = {
-  inputValue: string;
+  isPending: boolean;
+  results: paths['/3/search/movie']['get']['responses']['200']['content']['application/json']['results'];
 };
 
-export const Dropdown = ({ inputValue }: Props) => {
-  const { isError, isPending, data } = useSearchMovies(inputValue);
-
+export const Dropdown = ({ isPending, results }: Props) => {
   if (isPending) {
     return (
       <div role="listbox" className={'dropdown dropdown--empty'}>
@@ -15,7 +15,7 @@ export const Dropdown = ({ inputValue }: Props) => {
     );
   }
 
-  if (!isPending && data && data.total_results === 0) {
+  if (!isPending && results && results.length === 0) {
     return (
       <div role="listbox" className={'dropdown dropdown--empty'}>
         <p>No options</p>
@@ -23,12 +23,12 @@ export const Dropdown = ({ inputValue }: Props) => {
     );
   }
 
-  if (data?.results) {
+  if (results && results.length > 0) {
     return (
       <ul role="listbox" className={'dropdown'} tabIndex={-1}>
-        {data.results.map((option) => (
-          <li className="list-none" key={option.id}>
-            {option.title}
+        {results.map((movie) => (
+          <li className="list-none" key={movie.id}>
+            {movie.title}
           </li>
         ))}
       </ul>

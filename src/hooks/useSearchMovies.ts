@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { paths } from '../../schema';
+import { useCallback } from 'react';
+import { debounce } from '../utilities/debounce';
 
 const options = {
   method: 'GET',
@@ -28,6 +30,7 @@ export const useSearchMovies = (searchStr: string) => {
   const { isPending, isError, data, error } = useQuery({
     queryKey: ['movies', searchStr],
     queryFn: () => searchMovies(searchStr),
+    enabled: searchStr.length > 1,
   });
 
   return {

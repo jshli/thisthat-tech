@@ -1,26 +1,33 @@
 import { useQuery } from '@tanstack/react-query';
 import { paths } from '../../schema';
-import { generateMd5 } from '../utilities/generateMd5';
 
-const fetchCharacters = async (
-  searchStr: string
-): Promise<paths['/v1/public/characters']['get']['responses']['200']> => {
-  const timestamp = 1709816847812;
-  //TODO: This is hardcoded
-  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=Sp&hash=df8fe48d53389795bb8f937e17994207&ts=${timestamp}&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}`;
-  return fetch(url).then(async (response) => {
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error);
-    }
-    return response.json();
-  });
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: import.meta.env.VITE_MOVIE_DB_KEY,
+  },
 };
 
-export const useGetCharacters = (searchStr: string) => {
+const searchMovies = async (
+  searchStr: string
+): Promise<
+  paths['/3/search/movie']['get']['responses']['200']['content']['application/json']
+> => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?query=${searchStr}&include_adult=false&language=en-US&page=1`,
+    options
+  )
+    .then((response) => response.json())
+    .catch((err) => console.error(err));
+
+  return response;
+};
+
+export const useSearchMovies = (searchStr: string) => {
   const { isPending, isError, data, error } = useQuery({
-    queryKey: ['characters', searchStr],
-    queryFn: () => fetchCharacters(searchStr),
+    queryKey: ['movies', searchStr],
+    queryFn: () => searchMovies(searchStr),
   });
 
   return {

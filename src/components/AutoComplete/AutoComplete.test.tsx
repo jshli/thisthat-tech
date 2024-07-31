@@ -16,7 +16,7 @@ describe('Auto Complete', () => {
 
   it('renders the user input', async () => {
     const user = userEvent.setup();
-    const input = screen.getByLabelText('Choose your team');
+    const input = screen.getByLabelText('Select your favourite movies');
     await act(async () => {
       await user.type(input, 'Hello world');
     });

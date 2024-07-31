@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from 'react';
+import { Dropdown } from './Dropdown/Dropdown';
 
 export const AutoComplete = () => {
   const [inputValue, setInputValue] = useState<string>('');
@@ -13,9 +14,9 @@ export const AutoComplete = () => {
   return (
     <div>
       <label htmlFor="autocomplete-input" className="label">
-        Choose your team
+        Select your favourite movies
       </label>
-      <div onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+      <div>
         <input
           role="combobox"
           id="autocomplete-input"
@@ -23,6 +24,7 @@ export const AutoComplete = () => {
           onChange={(e) => handleInputChange(e)}
           list="autocomplete-options"
         />
+        {inputValue.length > 1 && <Dropdown inputValue={inputValue} />}
       </div>
     </div>
   );

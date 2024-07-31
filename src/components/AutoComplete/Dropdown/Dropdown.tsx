@@ -1,11 +1,11 @@
-import { useGetCharacters } from '../../../hooks/useGetCharacters';
+import { useSearchMovies } from '../../../hooks/useGetCharacters';
 
 type Props = {
   inputValue: string;
 };
 
 export const Dropdown = ({ inputValue }: Props) => {
-  const { response, isError, isPending } = useGetCharacters(inputValue);
+  const { isError, isPending, data } = useSearchMovies(inputValue);
 
   if (isPending) {
     return (
@@ -15,7 +15,7 @@ export const Dropdown = ({ inputValue }: Props) => {
     );
   }
 
-  if (!isPending && response && response.data && response.data?.count === 0) {
+  if (!isPending && data && data.total_results === 0) {
     return (
       <div role="listbox" className={'dropdown dropdown--empty'}>
         <p>No options</p>
@@ -23,13 +23,15 @@ export const Dropdown = ({ inputValue }: Props) => {
     );
   }
 
-  return (
-    <ul role="listbox" className={'dropdown'} tabIndex={-1}>
-      {response.data.results.map((option) => (
-        <li className="list-none" key={option.id}>
-          {option.name}
-        </li>
-      ))}
-    </ul>
-  );
+  if (data?.results) {
+    return (
+      <ul role="listbox" className={'dropdown'} tabIndex={-1}>
+        {data.results.map((option) => (
+          <li className="list-none" key={option.id}>
+            {option.title}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 };

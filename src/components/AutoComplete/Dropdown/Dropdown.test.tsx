@@ -12,24 +12,14 @@ describe('Dropdown', () => {
   });
   it('displays loading text if loading', () => {
     render(
-      <Dropdown
-        isPending={true}
-        results={[]}
-        onSelect={mockedOnSelect}
-        selectedIds={[]}
-      />
+      <Dropdown isPending={true} results={[]} onSelect={mockedOnSelect} />
     );
     expect(screen.getByText('Loading...')).toBeVisible();
   });
 
   it('displays No Options if not loading and no options', () => {
     render(
-      <Dropdown
-        isPending={false}
-        results={[]}
-        onSelect={mockedOnSelect}
-        selectedIds={[]}
-      />
+      <Dropdown isPending={false} results={[]} onSelect={mockedOnSelect} />
     );
     expect(screen.getByText('No options')).toBeVisible();
   });
@@ -37,7 +27,6 @@ describe('Dropdown', () => {
   it('displays options in a list if there are results', () => {
     render(
       <Dropdown
-        selectedIds={[]}
         isPending={false}
         results={searchResults}
         onSelect={mockedOnSelect}
@@ -53,7 +42,6 @@ describe('Dropdown', () => {
         isPending={false}
         results={searchResults}
         onSelect={mockedOnSelect}
-        selectedIds={[]}
       />
     );
 
@@ -61,22 +49,5 @@ describe('Dropdown', () => {
 
     await user.click(screen.getByRole('option', { name: selectedMovie.title }));
     expect(mockedOnSelect).toHaveBeenCalledWith(selectedMovie);
-  });
-
-  it('does not render an option if it has already been selected', async () => {
-    const user = userEvent.setup();
-    const selectedMovie = searchResults[0];
-    render(
-      <Dropdown
-        selectedIds={[selectedMovie.id]}
-        isPending={false}
-        results={searchResults}
-        onSelect={mockedOnSelect}
-      />
-    );
-
-    expect(
-      screen.queryByRole('option', { name: selectedMovie.title })
-    ).toBeNull();
   });
 });

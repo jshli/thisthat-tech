@@ -25,6 +25,15 @@ export const Input = ({ onSelect, selected }: Props) => {
     debouncedSetSearchStr(value);
   };
 
+  const filteredResults = useMemo(() => {
+    if (data?.results) {
+      const selectedIds = selected.map((movie) => movie.id);
+      return data.results.filter((movie) => !selectedIds.includes(movie.id));
+    } else {
+      return [];
+    }
+  }, [data?.results, selected]);
+
   return (
     <div className="w-full relative">
       <label htmlFor="autocomplete-input" className="block mb-2">
@@ -41,9 +50,8 @@ export const Input = ({ onSelect, selected }: Props) => {
         />
         {inputValue.length > 1 && (
           <Dropdown
-            selectedIds={selected.map((movie) => movie.id)}
             isPending={isPending}
-            results={data?.results}
+            results={filteredResults}
             onSelect={onSelect}
           />
         )}

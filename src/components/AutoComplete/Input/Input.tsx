@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { Dropdown } from '../Dropdown/Dropdown';
 import { useSearchMovies } from '../../../hooks/useSearchMovies';
 import { debounce } from '../../../utilities/debounce';
@@ -11,6 +11,7 @@ type Props = {
 
 export const Input = ({ onSelect, selected }: Props) => {
   const [inputValue, setInputValue] = useState<string>('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchStr, setSearchStr] = useState<string>('');
   const { isPending, isError, data } = useSearchMovies(searchStr);
 
@@ -23,6 +24,7 @@ export const Input = ({ onSelect, selected }: Props) => {
     const value = e.target.value;
     setInputValue(value);
     debouncedSetSearchStr(value);
+    setIsDropdownOpen(value.length > 1);
   };
 
   const filteredResults = useMemo(() => {
@@ -33,6 +35,32 @@ export const Input = ({ onSelect, selected }: Props) => {
       return [];
     }
   }, [data?.results, selected]);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'ArrowUp':
+          if (inputValue.length > 1) {
+            setIsDropdownOpen(true);
+          }
+          break;
+        case 'Escape':
+          setIsDropdownOpen(false);
+          break;
+        default:
+          break;
+      }
+    },
+    [inputValue.length]
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <div className="w-full relative">
@@ -48,7 +76,7 @@ export const Input = ({ onSelect, selected }: Props) => {
           onChange={(e) => handleInputChange(e)}
           list="autocomplete-options"
         />
-        {inputValue.length > 1 && (
+        {isDropdownOpen && (
           <Dropdown
             isPending={isPending}
             results={filteredResults}

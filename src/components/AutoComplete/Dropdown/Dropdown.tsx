@@ -34,11 +34,8 @@ export const Dropdown = ({ isPending, results, onSelect }: Props) => {
               }
             });
             break;
-          // case 'Escape':
-          //   setIsOpen(false);
-          //   break;
           case 'Enter':
-            if (focusedIndex) {
+            if (focusedIndex !== undefined) {
               onSelect(results[focusedIndex]);
             }
             break;

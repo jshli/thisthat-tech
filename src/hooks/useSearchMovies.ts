@@ -17,7 +17,10 @@ const searchMovies = async (
   paths['/3/search/movie']['get']['responses']['200']['content']['application/json']
 > => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${searchStr}&include_adult=false&language=en-US&page=1`,
+    'https://api.themoviedb.org/3/search/movie?' +
+      new URLSearchParams({
+        query: searchStr,
+      }),
     options
   )
     .then((response) => response.json())

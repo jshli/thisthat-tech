@@ -26,12 +26,13 @@ export const Input = ({ onSelect, selected }: Props) => {
   };
 
   return (
-    <div>
-      <label htmlFor="autocomplete-input" className="label">
+    <div className="w-full relative">
+      <label htmlFor="autocomplete-input" className="block mb-2">
         Select your favourite movies
       </label>
       <div>
         <input
+          className="w-full border-gray-dark border-2 rounded-md p-2 focus:outline-pink duration-300 transition-all"
           role="combobox"
           id="autocomplete-input"
           value={inputValue}

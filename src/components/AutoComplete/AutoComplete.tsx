@@ -7,7 +7,7 @@ export const AutoComplete = () => {
   const [selectedMovies, setSelectedMovies] = useState<Movie[]>([]);
 
   return (
-    <>
+    <div className="w-72">
       <List
         selected={selectedMovies}
         onRemove={(id) =>
@@ -18,6 +18,6 @@ export const AutoComplete = () => {
         selected={selectedMovies}
         onSelect={(value) => setSelectedMovies([...selectedMovies, value])}
       />
-    </>
+    </div>
   );
 };

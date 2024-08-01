@@ -5,6 +5,7 @@ import { render, screen } from '@testing-library/react';
 import { userEvent } from '@storybook/test';
 
 const mockOnRemove = vi.fn();
+
 describe('List', () => {
   it('displays a list of selected movies as list items', () => {
     const selectedMovies = searchResults.slice(0, 2);

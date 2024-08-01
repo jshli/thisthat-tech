@@ -4,6 +4,8 @@ export default {
   theme: {
     colors: {
       'gray-light': '#292929',
+      'gray-dark': '#3f3f3f',
+      pink: '#FF629F',
     },
     extend: {},
   },

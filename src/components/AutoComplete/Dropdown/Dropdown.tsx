@@ -27,7 +27,11 @@ export const Dropdown = ({ isPending, results, onSelect }: Props) => {
 
   if (results && results.length > 0) {
     return (
-      <ul role="listbox" className={'dropdown'} tabIndex={-1}>
+      <ul
+        role="listbox"
+        className={'absolute w-full px-1 bg-gray-light max-h-80 overflow-auto'}
+        tabIndex={-1}
+      >
         {results.map((movie) => (
           <li
             className="list-none"

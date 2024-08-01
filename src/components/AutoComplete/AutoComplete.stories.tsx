@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AutoComplete } from './AutoComplete';
 import Providers from '../../providers';
 import { handlers } from '../../mocks/handlers';
+import { userEvent, within } from '@storybook/test';
 
 const meta: Meta<typeof AutoComplete> = {
   component: AutoComplete,
@@ -24,5 +25,11 @@ export const Default: Story = {
       handlers,
     },
   },
-  args: {},
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const autoCompleteInput = canvas.getByLabelText(
+      'Select your favourite movies'
+    );
+    await userEvent.type(autoCompleteInput, 'Spi');
+  },
 };

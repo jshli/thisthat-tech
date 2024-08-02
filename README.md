@@ -1,30 +1,40 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application allows users to search for and select/remove their favourite movies.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First, create an `.env.local` file in the root of this project, with VITE_MOVIE_DB_KEY="" (I should have emailed the api key across).
 
-## Expanding the ESLint configuration
+Then, run:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+pnpm install
+pnpm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This application comes with Storybook for UI development and integration testing. To run,
+
+```bash
+pnpm run storybook
+```
+
+To run tests:
+
+```bash
+pnpm run test
+```
+
+## Features
+
+- TailwindCSS for style utilities
+- React-query for fetching/state management
+- Vitest + React Testing Library for unit testing
+- Storybook for UI development and integration testing
+- MSW for mocking API endpoints
+
+## What next
+
+- The movie API provides further filtering options, such as by Language, Release Date and Ratings. It would make sense to expose those API capabilities to the front-end, allowing the user more granularity in searching
+- Currently the UI is completely coupled with the API (i.e. the props have names like 'selectedMovies'). It might make sense to make this a generic 'Selector' component that takes any data array
+- Expand on the UI, possible allowing the user to expand movie selections to see more details, or to rearrange the list so there's a preference order.

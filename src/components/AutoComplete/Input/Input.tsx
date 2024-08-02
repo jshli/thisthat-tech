@@ -87,19 +87,25 @@ export const Input = ({ onSelect, selected }: Props) => {
     };
   }, [handleOnClickOutside]);
 
+  const toggleDropdown = () => {
+    if (inputValue.length > 1 && !isDropdownOpen) {
+      setIsDropdownOpen(true);
+    }
+  };
+
   return (
     <div className="relative w-full" ref={wrapperRef}>
       <label htmlFor="autocomplete-input" className="mb-2 block">
         Select your favourite movies
       </label>
-      <div>
+      <div onClick={toggleDropdown}>
         <input
           className={`w-full rounded-md border-2 p-2 transition-all duration-300 ${
             isError
               ? 'border-error focus:border-error focus:outline-error'
               : 'border-gray-dark focus:border-pink focus:outline-pink'
           }`}
-          role="combobox"
+          role="searchbox"
           id="autocomplete-input"
           value={inputValue}
           onChange={(e) => handleInputChange(e)}

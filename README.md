@@ -28,6 +28,7 @@ pnpm run test
 ## Features
 
 - TailwindCSS for style utilities
+- Uses OpenAPI-TS to pull OpenAPI specs and convert them into Tyescript schemas
 - React-query for fetching/state management
 - Vitest + React Testing Library for unit testing
 - Storybook for UI development and integration testing

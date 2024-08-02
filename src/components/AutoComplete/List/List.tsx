@@ -11,7 +11,7 @@ export const List = ({ selected, onRemove }: Props) => {
         <li
           key={movie.id}
           className="flex items-center mb-4"
-          value={movie.title}
+          aria-label={movie.title}
         >
           <div
             style={{

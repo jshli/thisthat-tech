@@ -14,10 +14,7 @@ export const DropdownItem = ({ isFocused, movie, ...rest }: Props) => {
     <li
       role="option"
       aria-label={movie.title}
-      style={{
-        backgroundColor: isFocused ? '#FF629F' : 'inherit',
-      }}
-      className="flex rounded-md items-center gap-3 duration-300 transition-all list-none p-2 cursor-pointer hover:bg-pink"
+      className={`flex cursor-pointer list-none items-center gap-3 rounded-md p-2 transition-all duration-300 hover:bg-pink ${isFocused ? 'bg-pink' : 'bg-none'}`}
       {...rest}
     >
       <img
@@ -27,7 +24,7 @@ export const DropdownItem = ({ isFocused, movie, ...rest }: Props) => {
 
       <div>
         <p>{movie.title}</p>
-        <p className="text-xs text-gray-200">
+        <p className="text-gray-200 text-xs">
           {getMovieYear(movie.release_date)}
         </p>
       </div>

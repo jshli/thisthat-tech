@@ -10,7 +10,7 @@ export const List = ({ selected, onRemove }: Props) => {
       {selected.map((movie) => (
         <li
           key={movie.id}
-          className="flex items-center mb-4"
+          className="mb-4 flex items-center"
           aria-label={movie.title}
         >
           <div
@@ -18,13 +18,13 @@ export const List = ({ selected, onRemove }: Props) => {
               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(255, 97, 159, 0.8)), url(http://image.tmdb.org/t/p/w780/${movie.backdrop_path}) center / cover`,
             }}
             className={
-              'justify-between flex p-2 rounded-md h-16 w-full bg-cover bg-center items-center'
+              'flex h-16 w-full items-center justify-between rounded-md bg-cover bg-center p-2'
             }
           >
             <p>{movie.title}</p>
           </div>
           <button
-            className="ml-3 p-2 rounded-full hover:text-pink"
+            className="ml-3 rounded-full p-2 hover:text-pink"
             aria-label={`Remove ${movie.title}`}
             onClick={() => onRemove(movie.id)}
           >

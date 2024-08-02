@@ -1,4 +1,11 @@
-import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Dropdown } from '../Dropdown/Dropdown';
 import { useSearchMovies } from '../../../hooks/useSearchMovies';
 import { debounce } from '../../../utilities/debounce';
@@ -14,6 +21,7 @@ export const Input = ({ onSelect, selected }: Props) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchStr, setSearchStr] = useState<string>('');
   const { isPending, isError, data } = useSearchMovies(searchStr);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const debouncedSetSearchStr = useMemo(
     () => debounce((value: string) => setSearchStr(value), 500),
@@ -55,6 +63,16 @@ export const Input = ({ onSelect, selected }: Props) => {
     [inputValue.length]
   );
 
+  const handleOnClickOutside = useCallback((e: MouseEvent) => {
+    if (!wrapperRef.current || !(e.target instanceof Node)) {
+      return;
+    }
+
+    if (!wrapperRef.current.contains(e.target)) {
+      setIsDropdownOpen(false);
+    }
+  }, []);
+
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -62,8 +80,15 @@ export const Input = ({ onSelect, selected }: Props) => {
     };
   }, [handleKeyDown]);
 
+  useEffect(() => {
+    document.addEventListener('mousedown', handleOnClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleOnClickOutside);
+    };
+  }, [handleOnClickOutside]);
+
   return (
-    <div className="relative w-full">
+    <div className="relative w-full" ref={wrapperRef}>
       <label htmlFor="autocomplete-input" className="mb-2 block">
         Select your favourite movies
       </label>
@@ -89,6 +114,9 @@ export const Input = ({ onSelect, selected }: Props) => {
           />
         )}
       </div>
+      <p className="mt-2 text-xs">
+        Please type at least 2 characters to start searching
+      </p>
     </div>
   );
 };

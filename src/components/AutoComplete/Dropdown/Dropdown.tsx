@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { paths } from '../../../../schema';
 import { Movie } from '../../../types';
 import { DropdownItem } from '../DropdownItem/DropdownItem';
+import { ListBox } from '../ListBox/ListBox';
 
 type Props = {
   isPending: boolean;
@@ -57,51 +58,30 @@ export const Dropdown = ({ isPending, results, onSelect, isError }: Props) => {
 
   if (isPending) {
     return (
-      <div
-        role="listbox"
-        className={
-          'absolute w-full  bg-gray-light max-h-80 overflow-auto rounded-md p-2'
-        }
-      >
+      <ListBox>
         <p>Loading...</p>
-      </div>
+      </ListBox>
     );
   }
 
   if (isError) {
     return (
-      <div
-        role="listbox"
-        className={
-          'absolute w-full  bg-gray-light max-h-80 overflow-auto rounded-md p-2'
-        }
-      >
+      <ListBox>
         <p>An error has occurred</p>
-      </div>
+      </ListBox>
     );
   }
   if (!isPending && results && results.length === 0) {
     return (
-      <div
-        role="listbox"
-        className={
-          'absolute w-full bg-gray-light max-h-80 overflow-auto rounded-md p-2 mt-2'
-        }
-      >
+      <ListBox>
         <p>No options</p>
-      </div>
+      </ListBox>
     );
   }
 
   if (results && results.length > 0) {
     return (
-      <ul
-        role="listbox"
-        className={
-          'absolute w-full bg-gray-light max-h-80 overflow-auto rounded-md py-2 mt-2'
-        }
-        tabIndex={-1}
-      >
+      <ListBox>
         {results.map((movie, index) => {
           return (
             <DropdownItem
@@ -114,7 +94,7 @@ export const Dropdown = ({ isPending, results, onSelect, isError }: Props) => {
             />
           );
         })}
-      </ul>
+      </ListBox>
     );
   }
 };

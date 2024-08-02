@@ -33,6 +33,11 @@ pnpm run test
 - Storybook for UI development and integration testing
 - MSW for mocking API endpoints
 
+## Challenges
+
+- Implementing full keyboard functionality to provide an accessible UX was an interesting challenge. Writing integration tests that tested for keyboard accessibility also provided a good challenge.
+- Minimising the use of libraries. Most of the imported libraries were related to testing/code quality/linting, which the two exceptions being Tailwind and react-query.
+
 ## What next
 
 - The movie API provides further filtering options, such as by Language, Release Date and Ratings. It would make sense to expose those API capabilities to the front-end, allowing the user more granularity in searching

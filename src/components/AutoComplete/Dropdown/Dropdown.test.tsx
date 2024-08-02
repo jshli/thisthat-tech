@@ -12,14 +12,24 @@ describe('Dropdown', () => {
   });
   it('displays loading text if loading', () => {
     render(
-      <Dropdown isPending={true} results={[]} onSelect={mockedOnSelect} />
+      <Dropdown
+        isPending={true}
+        results={[]}
+        onSelect={mockedOnSelect}
+        isError={false}
+      />
     );
     expect(screen.getByText('Loading...')).toBeVisible();
   });
 
   it('displays No Options if not loading and no options', () => {
     render(
-      <Dropdown isPending={false} results={[]} onSelect={mockedOnSelect} />
+      <Dropdown
+        isPending={false}
+        results={[]}
+        onSelect={mockedOnSelect}
+        isError={false}
+      />
     );
     expect(screen.getByText('No options')).toBeVisible();
   });
@@ -27,6 +37,7 @@ describe('Dropdown', () => {
   it('displays options in a list if there are results', () => {
     render(
       <Dropdown
+        isError={false}
         isPending={false}
         results={searchResults}
         onSelect={mockedOnSelect}
@@ -39,6 +50,7 @@ describe('Dropdown', () => {
     const user = userEvent.setup();
     render(
       <Dropdown
+        isError={false}
         isPending={false}
         results={searchResults}
         onSelect={mockedOnSelect}
@@ -56,6 +68,7 @@ describe('Dropdown', () => {
     render(
       <Dropdown
         isPending={false}
+        isError={false}
         results={searchResults}
         onSelect={mockedOnSelect}
       />

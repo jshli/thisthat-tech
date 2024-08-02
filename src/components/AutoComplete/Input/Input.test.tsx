@@ -1,7 +1,6 @@
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import { it, expect, describe, vi } from 'vitest';
 import '@testing-library/jest-dom';
-import * as hooks from '../../../hooks/useSearchMovies';
 
 import { userEvent } from '@storybook/test';
 import { Input } from './Input';

@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import { paths } from '../../schema';
-import { useCallback } from 'react';
-import { debounce } from '../utilities/debounce';
 
 const options = {
   method: 'GET',

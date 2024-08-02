@@ -4,7 +4,7 @@ import { AutoComplete } from './AutoComplete';
 import Providers from '../../providers';
 import { handlers } from '../../mocks/handlers';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
-import { http } from 'msw';
+import { http, HttpResponse } from 'msw';
 
 const meta: Meta<typeof AutoComplete> = {
   component: AutoComplete,
@@ -78,6 +78,25 @@ export const Loading: Story = {
       handlers: [
         http.get('https://api.themoviedb.org/3/search/movie', () => {
           return new Promise(() => {});
+        }),
+      ],
+    },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const autoCompleteInput = canvas.getByLabelText(
+      'Select your favourite movies'
+    );
+    await userEvent.type(autoCompleteInput, 'Sp');
+  },
+};
+
+export const Error: Story = {
+  parameters: {
+    msw: {
+      handlers: [
+        http.get('https://api.themoviedb.org/3/search/movie', () => {
+          return new HttpResponse(null, { status: 401 });
         }),
       ],
     },

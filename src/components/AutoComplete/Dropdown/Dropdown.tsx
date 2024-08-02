@@ -5,11 +5,12 @@ import { DropdownItem } from '../DropdownItem/DropdownItem';
 
 type Props = {
   isPending: boolean;
+  isError: boolean;
   onSelect: (value: Movie) => void;
   results: paths['/3/search/movie']['get']['responses']['200']['content']['application/json']['results'];
 };
 
-export const Dropdown = ({ isPending, results, onSelect }: Props) => {
+export const Dropdown = ({ isPending, results, onSelect, isError }: Props) => {
   const [focusedIndex, setFocusedIndex] = useState<undefined | number>(0);
 
   const handleKeyDown = useCallback(
@@ -67,6 +68,18 @@ export const Dropdown = ({ isPending, results, onSelect }: Props) => {
     );
   }
 
+  if (isError) {
+    return (
+      <div
+        role="listbox"
+        className={
+          'absolute w-full  bg-gray-light max-h-80 overflow-auto rounded-md p-2'
+        }
+      >
+        <p>An error has occurred</p>
+      </div>
+    );
+  }
   if (!isPending && results && results.length === 0) {
     return (
       <div

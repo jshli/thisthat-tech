@@ -63,13 +63,17 @@ export const Input = ({ onSelect, selected }: Props) => {
   }, [handleKeyDown]);
 
   return (
-    <div className="w-full relative">
-      <label htmlFor="autocomplete-input" className="block mb-2">
+    <div className="relative w-full">
+      <label htmlFor="autocomplete-input" className="mb-2 block">
         Select your favourite movies
       </label>
       <div>
         <input
-          className="w-full border-gray-dark border-2 rounded-md p-2 focus:outline-pink duration-300 transition-all"
+          className={`w-full rounded-md border-2 p-2 transition-all duration-300 ${
+            isError
+              ? 'border-error focus:border-error focus:outline-error'
+              : 'border-gray-dark focus:border-pink focus:outline-pink'
+          }`}
           role="combobox"
           id="autocomplete-input"
           value={inputValue}
@@ -78,6 +82,7 @@ export const Input = ({ onSelect, selected }: Props) => {
         />
         {isDropdownOpen && (
           <Dropdown
+            isError={isError}
             isPending={isPending}
             results={filteredResults}
             onSelect={onSelect}

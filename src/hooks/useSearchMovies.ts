@@ -16,7 +16,6 @@ const searchMovies = async (
 ): Promise<
   paths['/3/search/movie']['get']['responses']['200']['content']['application/json']
 > => {
-  console.log('hello');
   const response = await fetch(
     'https://api.themoviedb.org/3/search/movie?' +
       new URLSearchParams({

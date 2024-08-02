@@ -6,6 +6,7 @@ export default {
       'gray-light': '#292929',
       'gray-dark': '#3f3f3f',
       pink: '#FF629F',
+      error: '#F41F53',
     },
     extend: {},
   },
